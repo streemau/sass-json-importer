@@ -1,0 +1,23 @@
+{
+  "hooks": {},
+  "git": {
+    "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
+    "requireBranch": "master",
+    "requireCleanWorkingDir": false,
+    "commit": true,
+    "commitMessage": "Release ${version}",
+    "tag": true,
+    "tagAnnotation": "Release ${version}",
+    "push": true,
+    "pushArgs": ["--follow-tags"],
+    "pushRepo": "origin",
+    "requireCommits": true
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release ${version}"
+  }
+}

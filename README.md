@@ -1,17 +1,17 @@
-# node-sass-json-importer
+# sass-json-importer
 
 JSON importer for [node-sass](https://github.com/sass/node-sass). Allows `@import`ing `.json` or `.json5` files in Sass files parsed by `node-sass`.
 
-[![npm](https://img.shields.io/npm/v/node-sass-json-importer.svg)](https://www.npmjs.com/package/node-sass-json-importer)
-[![build status](https://travis-ci.org/pmowrer/node-sass-json-importer.svg?branch=master)](https://travis-ci.org/Updater/node-sass-json-importer)
+[![npm](https://img.shields.io/npm/v/sass-json-importer.svg)](https://www.npmjs.com/package/sass-json-importer)
+[![build status](https://travis-ci.org/pmowrer/sass-json-importer.svg?branch=master)](https://travis-ci.org/Updater/sass-json-importer)
 
 ## Usage
 ### [node-sass](https://github.com/sass/node-sass)
-This module hooks into [node-sass's importer api](https://github.com/sass/node-sass#importer--v200---experimental).
+This module hooks into [sass's importer api](https://github.com/sass/node-sass#importer--v200---experimental).
 
 ```javascript
-var sass = require('node-sass');
-var jsonImporter = require('node-sass-json-importer');
+var sass = require('sass');
+var jsonImporter = require('sass-json-importer');
 
 // Example 1
 sass.render({
@@ -28,12 +28,12 @@ var result = sass.renderSync({
 });
 ```
 
-### [node-sass](https://github.com/sass/node-sass) command-line interface
+### [sass](https://github.com/sass/sass) command-line interface
 
-To run this using node-sass CLI, point `--importer` to your installed json importer, for example: 
+To run this using sass CLI, point `--importer` to your installed json importer, for example:
 
 ```sh
-./node_modules/.bin/node-sass --importer node_modules/node-sass-json-importer/dist/cli.js --recursive ./src --output ./dist
+./node_modules/.bin/sass --importer node_modules/sass-json-importer/dist/cli.js --recursive ./src --output ./dist
 ```
 
 ### Webpack / [sass-loader](https://github.com/jtangelder/sass-loader)
@@ -41,7 +41,7 @@ To run this using node-sass CLI, point `--importer` to your installed json impor
 #### Webpack v1
 
 ```javascript
-import jsonImporter from 'node-sass-json-importer';
+import jsonImporter from 'sass-json-importer';
 
 // Webpack config
 export default {
@@ -61,7 +61,7 @@ export default {
 #### Webpack v2
 
 ```javascript
-import jsonImporter from 'node-sass-json-importer';
+import jsonImporter from 'sass-json-importer';
 
 // Webpack config
 export default {
@@ -112,11 +112,11 @@ Since JSON doesn't map directly to SASS's data types, a common source of confusi
 
 See discussion here for more:
 
-https://github.com/Updater/node-sass-json-importer/pull/5
+https://github.com/Updater/sass-json-importer/pull/5
 
 ### Importing *.js Files
 
-You can also import *.js Files. This way you can use javascript to compose and export json structure for node-sass-json-importer.
+You can also import *.js Files. This way you can use javascript to compose and export json structure for sass-json-importer.
 ```
 const xl = require('./variables.json')
 const md = require('./variables-md.json')
@@ -150,7 +150,7 @@ body
 ```js
 var path = require('path');
 var sass = require('node-sass');
-var jsonImporter = require('../dist/node-sass-json-importer');
+var jsonImporter = require('../dist/sass-json-importer');
 
 sass.render({
   file: './1.sass',

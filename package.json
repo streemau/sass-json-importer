@@ -1,5 +1,5 @@
 {
-  "name": "sass-json-importer",
+  "name": "@streemau/sass-json-importer",
   "version": "0.1.0",
   "description": "Allows importing json in sass files parsed by sass.",
   "main": "dist/index.js",

@@ -1,12 +1,12 @@
 {
-  "name": "node-sass-json-importer",
-  "version": "0.0.0-development",
-  "description": "Allows importing json in sass files parsed by node-sass.",
+  "name": "sass-json-importer",
+  "version": "0.0.0",
+  "description": "Allows importing json in sass files parsed by sass.",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Updater/node-sass-json-importer.git"
+    "url": "https://github.com/streemau/sass-json-importer.git"
   },
   "keywords": [
     "sass",
@@ -15,12 +15,13 @@
     "json"
   ],
   "scripts": {
+    "release": "release-it",
     "test": "mocha --require @babel/register",
     "compile": "mkdirp dist && babel src -d dist",
     "prepublishOnly": "npm run compile"
   },
   "peerDependencies": {
-    "node-sass": ">=3.5.3"
+    "sass": ">=1.5.0"
   },
   "dependencies": {
     "is-there": "^4.4.4",
@@ -35,7 +36,8 @@
     "chai": "^4.2.0",
     "mkdirp": "^1.0.3",
     "mocha": "^7.0.1",
-    "node-sass": ">=3.5.3",
+    "release-it": "^15.0.0",
+    "sass": ">=1.5.0",
     "semantic-release": "^17.0.2",
     "semantic-release-github-pr": "^6.0.0"
   }
